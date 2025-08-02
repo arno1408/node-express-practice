@@ -1,0 +1,13 @@
+{
+  "[ejs]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoSurround": "never",
+    "editor.autoClosingTags": false
+  },
+  "emmet.includeLanguages": {
+    "ejs": ""
+  }
+}
