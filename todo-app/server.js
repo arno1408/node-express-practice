@@ -1,4 +1,9 @@
 let express = require("express");
+
+let dotenv = require("dotenv");
+
+dotenv.config();
+
 let { MongoClient, ObjectId } = require("mongodb");
 
 let app = express();
@@ -7,9 +12,7 @@ let db;
 app.use(express.static("public"));
 
 async function go() {
-  let client = new MongoClient(
-    "mongodb+srv://arnothelastmilestone:mongodb@cluster0.e5kswhs.mongodb.net/todo-app?retryWrites=true&w=majority&appName=Cluster0"
-  );
+  let client = new MongoClient(process.env.URI);
   await client.connect();
   db = client.db();
   app.listen(3000);
